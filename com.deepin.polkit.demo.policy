@@ -4,20 +4,38 @@
  "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
 <policyconfig>
   <action id="com.deepin.polkit.demo.fun1">
-    <description>echo hello</description>
-    <message>自定义操作1</message>
+    <icon_name>dialog-warning</icon_name>
+    <description>我是描述内容1</description>
+    <message>I am action 1</message>
+    <message xml:lang="zh_CN">我是操作1的中文翻译</message>
     <defaults>
+      <allow_any>no</allow_any>
       <allow_inactive>no</allow_inactive>
-      <allow_active>yes</allow_active>
+      <allow_active>auth_self_keep</allow_active>
     </defaults>
   </action>
   
   <action id="com.deepin.polkit.demo.fun2">
-    <description>write file to /etc</description>
-    <message>自定义操作2</message>
+    <icon_name>folder</icon_name>
+    <description>我是描述内容2</description>
+    <message>I am action 2</message>
+    <message xml:lang="zh_CN">我是操作2的中文翻译</message>
     <defaults>
-      <allow_inactive>no</allow_inactive>
-      <allow_active>auth_admin</allow_active>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
     </defaults>
   </action>
+
+    <action id="com.deepin.polkit.demo.fun3">
+      <icon_name>我是操作3对应的图标名</icon_name>
+      <description>我是描述内容3</description>
+      <message>虽然我看起来是中文，但是在英文环境下会显示我</message>
+      <message xml:lang="zh_CN">我是操作3的中文翻译</message>
+      <defaults>
+        <allow_inactive>yes</allow_inactive>
+        <allow_active>yes</allow_active>
+      </defaults>
+      <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/polkit_server</annotate>
+      <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+    </action>
 </policyconfig>
