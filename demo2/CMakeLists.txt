@@ -1,5 +1,7 @@
 project(demo2)
 
+set(CMAKE_INSTALL_PREFIX /usr)
+
 find_package(Qt5Widgets)
 find_package(Qt5DBus)
 

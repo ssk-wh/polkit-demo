@@ -1,5 +1,7 @@
 project(polkit_demo)
 
+set(CMAKE_INSTALL_PREFIX /usr)
+
 set(SOURCE_FILES
         main.cpp)
 
