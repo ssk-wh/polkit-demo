@@ -1,3 +1,7 @@
+一个用于polkit提权验证的demo项目，如果您不清楚如何在项目中发起此类请求或不清楚如何使用polkit，demo1和demo2对您会有所帮助
+
+
+
 # 0、安装编译依赖
 sudo apt install build-essential cmake qtbase5-dev libpolkit-qt5-1-dev
 
@@ -9,7 +13,7 @@ cmake ..
 make -j8
 sudo make install
 
-# 2、也可以选择早debian文件夹所在的目录打包安装，这样更方便
+# 2、也可以选择在debian文件夹所在的目录打包安装，这样更方便
 dpkg-buildpackage -us -uc -nc
 
 ## 2.1、安装打包生成的deb包(生成的deb包在上一目录中)
@@ -23,5 +27,5 @@ systemctl start com.deepin.dde.pokit.demo.service
 /usr/bin/polkit_client
 
 # 4、恢复电脑环境
-sudo make uninstall
+sudo make uninstall或者sudo apt remove polkit-example
 

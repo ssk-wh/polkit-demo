@@ -1,4 +1,4 @@
-Source: polkit-demo
+Source: polkit-example
 Section: admin
 Priority: optional
 Maintainer: Deepin Sysdev <sysdev@deepin.com>
@@ -8,7 +8,7 @@ Build-Depends:  debhelper (>= 11),
 Standards-Version: 4.1.3
 Homepage: TODO
 
-Package: polkit-demo
+Package: polkit-example
 Architecture: any
 Depends:
  ${shlibs:Depends},
