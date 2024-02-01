@@ -18,14 +18,14 @@ sudo make install
 ## 也可以选择在 debian 文件夹所在的目录打包安装，这样更方便
 `dpkg-buildpackage -us -uc -nc`
 
-### 安装打包生成的deb包(生成的deb包在上一目录中)
+### 安装打包生成的 deb 包(生成的 deb 包在上一目录中)
 `sudo dpkg -i [deb path]`
 
 ## 运行
 运行服务端
 `systemctl start com.deepin.dde.pokit.demo.service`
 
-运行客户端，通过dbus调用实现提权操作，完成普通进程无法处理的操作
+运行客户端，通过 dbus 调用实现提权操作，完成普通进程无法处理的操作
 `/usr/bin/polkit_client`
 
 ## 恢复电脑环境
